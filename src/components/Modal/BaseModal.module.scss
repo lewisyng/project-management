@@ -1,0 +1,25 @@
+.base-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.base-modal__title,
+.base-modal__subtitle {
+    text-align: center;
+}
+
+.base-modal__content {
+    background: #f4f5f7;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.base-modal__content:focus-visible {
+    outline: none;
+}
+
+.base-modal__content-header {
+    margin-bottom: 2rem;
+}
