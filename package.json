@@ -1,29 +1,26 @@
 {
-  "name": "todo",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "project-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "dev:todo": "turbo run dev --no-cache --parallel --continue -- --filter todo --filter ui",
+    "dev:storybook": "turbo run dev --no-cache --parallel --continue -- --filter todo-storybook --filter ui"
   },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.0.4",
-    "@tabler/icons": "^1.106.0",
-    "classnames": "^2.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-modal": "^3.16.1",
-    "react-router-dom": "^6.4.2",
-    "sass": "^1.55.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewisyng/project-management.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/lewisyng/project-management#readme",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@types/react-modal": "^3.13.1",
-    "@vitejs/plugin-react": "^2.1.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "turbo": "^1.6.1"
   }
 }

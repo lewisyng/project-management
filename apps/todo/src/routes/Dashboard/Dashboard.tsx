@@ -1,5 +1,6 @@
 import Header from '../../components/Header/Header';
 import styles from './Dashboard.module.scss';
+import { Button } from 'ui';
 
 const Dashboard = () => {
     // const boards = useLiveQuery(() => database.boards.toArray());
@@ -33,6 +34,9 @@ const Dashboard = () => {
                 {/* <BackgroundLayer /> */}
                 <Header />
                 {/* {currentBoa rdId ? <Board /> : <NoBoardScreen />} */}
+                <div className={styles['app__body']}>
+                    <Button variant="primary" form='contained'>BTN</Button>
+                </div>
             </div>
         </div>
     );

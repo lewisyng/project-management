@@ -6,6 +6,7 @@ import SignUp from './routes/SignUp/SignUp';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { supabase } from './supabaseClient';
+import Dashboard from './routes/Dashboard/Dashboard';
 
 const App = () => {
     const [session, setSession] = useState<any>(null);
@@ -24,7 +25,8 @@ const App = () => {
         {
             path: '/',
             element: !session ? (
-                <Auth />
+                // <Auth />
+                <Dashboard />
             ) : (
                 <UserShell key={session.user.id} session={session} />
             ),
